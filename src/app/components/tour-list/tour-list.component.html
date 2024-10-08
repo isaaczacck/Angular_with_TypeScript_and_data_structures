@@ -1,0 +1,22 @@
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <h2 class="text-success">Tour List</h2>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="newTourName" placeholder="Tour Name" />
+        <input type="text" class="form-control" [(ngModel)]="newLocation" placeholder="Location" />
+        <input type="date" class="form-control" [(ngModel)]="newDate" placeholder="Date" />
+        <button class="btn btn-success" (click)="addTour()">Add</button>
+      </div>
+
+      <ul class="list-group mt-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let tour of tours">
+          {{ tour.name }} - {{ tour.location }} ({{ tour.date }}) <!-- Display tour details -->
+          <button class="btn btn-danger btn-sm" (click)="deleteTour(tour)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
