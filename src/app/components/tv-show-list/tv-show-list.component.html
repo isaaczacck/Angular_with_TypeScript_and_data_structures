@@ -1,0 +1,20 @@
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <h2 class="text-success">TV Show List</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="newTvShowTitle" placeholder="TV Show Title" />
+        <input type="text" class="form-control" [(ngModel)]="newTvShowUrl" placeholder="TV Show URL" />
+        <button class="btn btn-success" (click)="addTvShow()">Add</button>
+      </div>
+      
+      <ul class="list-group mt-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let tvShow of tvShows">
+          <a [href]="tvShow.url" target="_blank">{{ tvShow.title }}</a> <!-- Display TV show title with URL -->
+          <button class="btn btn-danger btn-sm" (click)="deleteTvShow(tvShow)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
