@@ -1,0 +1,19 @@
+<br><br><div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h2 class="text-success">Composer List</h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" [(ngModel)]="newComposer" placeholder="Composer Name" />
+          <button class="btn btn-success" (click)="addComposer()">Add</button>
+        </div>
+        
+        <ul class="list-group mt-3">
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let composer of composerItems">
+            {{ composer }}
+            <button class="btn btn-danger btn-sm" (click)="deleteComposer(composer)">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
