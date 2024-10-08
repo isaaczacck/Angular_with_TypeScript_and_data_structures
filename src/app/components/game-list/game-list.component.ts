@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class GameListComponent {
 
   game: string [] = ["Mobile Legend", "Call of Duty", "Minecraft"];
-  newGame: string = '';
+  newGame: string = "";
 
   addGame(){
     if(this.newGame.trim()){

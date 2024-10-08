@@ -28,7 +28,7 @@ export class LaptopSpecificationListComponent {
     }
   }
 
-  // Remove a laptop from the list
+  // Remove or delete a laptop from the list
   deleteLaptop(laptop: { brand: string; specs: string }) {
     this.laptops = this.laptops.filter(l => l.brand !== laptop.brand);
   }
