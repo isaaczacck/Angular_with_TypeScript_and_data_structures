@@ -1,0 +1,19 @@
+<br><br><div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h2 class="text-success">Mobile App List</h2>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" [(ngModel)]="newApp" placeholder="Add new Monile App">
+          <button class="btn btn-success" (click)="addMobileapp()">Add</button>
+        </div>
+  
+        <ul class="list-group mt-3">
+          <li class="list-group-item d-flex justify-content-between" *ngFor="let apps of apps">
+            {{ apps }}
+            <button class="btn btn-danger btn-sm" (click)="deleteMobileapp(apps)">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
