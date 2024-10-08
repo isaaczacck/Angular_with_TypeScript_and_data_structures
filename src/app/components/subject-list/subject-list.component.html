@@ -1,0 +1,18 @@
+<br><br><div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2 class="text-success">Subject List</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="newSubject" placeholder="Add new Subject">
+                <button class="btn btn-success" (click)="addSubject()">Add</button>
+            </div>
+
+            <ul class="list-group mt-3">
+                <li class="list-group-item d-flex justify-content-between" *ngFor="let subject of subject">
+                    {{subject}}
+                    <button class="btn btn-danger btn-sm" (click)="deleteSubject(subject)">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
