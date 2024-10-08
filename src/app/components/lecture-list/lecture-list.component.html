@@ -1,0 +1,23 @@
+<br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center">
+      <h2 class="text-success">Lecture List</h2>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" [(ngModel)]="newDuration" placeholder="Duration" />
+        <input type="text" class="form-control" [(ngModel)]="newCourse" placeholder="Course" />
+        <input type="text" class="form-control" [(ngModel)]="newDay" placeholder="Day" />
+        <input type="number" class="form-control" [(ngModel)]="newYear" placeholder="Year" min="2024" />
+        <input type="text" class="form-control" [(ngModel)]="newTeacher" placeholder="Teacher/Prof" />
+        <button class="btn btn-success" (click)="addLecture()">Add</button>
+      </div>
+      
+      <ul class="list-group mt-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let lecture of lectures">
+          {{ lecture.course }} - {{ lecture.duration }} on {{ lecture.day }}, {{ lecture.year }} - Prof.{{ lecture.teacher }} <!-- Display lecture details -->
+          <button class="btn btn-danger btn-sm" (click)="deleteLecture(lecture)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
